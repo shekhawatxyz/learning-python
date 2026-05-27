@@ -111,7 +111,7 @@ Whatever cluster this concept/construct/pattern is part of, try to also exercise
 Here's the output of `tree` at the very beginning:
 ```
 .
-├── CLAUDE.md
+├── AGENTS.md
 ├── exercises
 ├── LICENSE
 ├── README.md
