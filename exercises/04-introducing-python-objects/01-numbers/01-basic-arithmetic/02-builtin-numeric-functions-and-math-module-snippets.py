@@ -9,10 +9,10 @@ print(min(3, 1, 4, 1, 5))
 print(max(3, 1, 4, 1, 5))
 
 # Your answer:
--7
+7
+3.6
 2
-2
-3
+1024
 1
 5
 
@@ -27,7 +27,7 @@ print(math.ceil(3.2))
 print(math.pi * 2)
 
 # Your answer:
-12
+12.0
 3
 4
 6.28
