@@ -9,7 +9,12 @@ print(min(3, 1, 4, 1, 5))
 print(max(3, 1, 4, 1, 5))
 
 # Your answer:
-
+-7
+2
+2
+3
+1
+5
 
 # --- Snippet 2 ---
 # The math module
@@ -22,3 +27,7 @@ print(math.ceil(3.2))
 print(math.pi * 2)
 
 # Your answer:
+12
+3
+4
+6.28
