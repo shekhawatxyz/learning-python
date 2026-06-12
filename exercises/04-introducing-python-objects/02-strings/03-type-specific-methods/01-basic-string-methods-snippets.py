@@ -9,7 +9,11 @@ print(S.upper())
 print(S.lower())
 
 # Your answer:
-
+# 7
+# -1
+# Hello, Python!
+# HELLO, WORLD!
+# hello, world!
 
 # --- Snippet 2 ---
 # strip variants, startswith, endswith, isalpha
@@ -26,3 +30,10 @@ print(T.isalpha())
 print("hello".isalpha())
 
 # Your answer:
+# 'Hello'
+# 'Hello  '
+# '  Hello'
+# True
+# False
+# False
+# True

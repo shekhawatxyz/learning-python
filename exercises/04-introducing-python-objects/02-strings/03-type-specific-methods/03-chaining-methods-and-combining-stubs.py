@@ -9,7 +9,7 @@
 
 raw = "  John   Doe  "
 # Your code here:
-name = ...
+name = " ".join(raw.split()).title()
 
 
 # Stub 2
@@ -22,27 +22,29 @@ name = ...
 
 sentence = "  the Quick BROWN fox  "
 # Your code here:
-slug = ...
+slug = "-".join(sentence.lower().split())
 
 
 # --- Tests ---
 # Do not modify below this line.
 
-assert name == "John Doe", \
-    f"name should be 'John Doe', got {name!r}"
+assert name == "John Doe", f"name should be 'John Doe', got {name!r}"
 
-assert slug == "the-quick-brown-fox", \
+assert slug == "the-quick-brown-fox", (
     f"slug should be 'the-quick-brown-fox', got {slug!r}"
+)
 
 # Additional edge case tests
 raw2 = "  jANE    sMITH  "
 name2 = " ".join(raw2.split()).title()
-assert name2 == "Jane Smith", \
+assert name2 == "Jane Smith", (
     f"Normalization should work for 'jANE    sMITH' too, got {name2!r}"
+)
 
 sentence2 = "  Hello World  "
 slug2 = "-".join(sentence2.strip().lower().split())
-assert slug2 == "hello-world", \
+assert slug2 == "hello-world", (
     f"Slug should work for '  Hello World  ' too, got {slug2!r}"
+)
 
 print("All tests passed.")

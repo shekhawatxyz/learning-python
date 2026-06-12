@@ -7,8 +7,9 @@ print(S.split(",", 1))
 print("hello world".split())
 
 # Your answer:
-
-
+# ['one', 'two', 'three']
+# ['one', 'two,three']
+# ["hello", "world"]
 # --- Snippet 2 ---
 # join and round-tripping with split
 
@@ -22,3 +23,8 @@ print(result)
 print(".".join(result))
 
 # Your answer:
+# Hello World
+# Hello-World
+# HelloWorld
+# ["a","b","c"]
+# a.b.c

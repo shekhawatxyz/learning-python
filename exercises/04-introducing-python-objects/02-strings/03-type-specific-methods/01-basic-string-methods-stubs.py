@@ -6,7 +6,8 @@
 
 raw_input = "  HeLLo WoRLd  "
 # Your code here:
-cleaned = ...
+raw_input = raw_input.strip().lower()
+cleaned = raw_input
 
 
 # Stub 2
@@ -19,24 +20,26 @@ cleaned = ...
 
 s = "my_variable_name"
 # Your code here:
-is_valid = ...
+is_valid = s.replace("_", "").isalnum()
 
 
 # --- Tests ---
 # Do not modify below this line.
 
-assert cleaned == "hello world", \
-    f"cleaned should be 'hello world', got {cleaned!r}"
+assert cleaned == "hello world", f"cleaned should be 'hello world', got {cleaned!r}"
 
-assert isinstance(is_valid, bool), \
+assert isinstance(is_valid, bool), (
     f"is_valid should be a bool, got {type(is_valid).__name__}"
-assert is_valid is True, \
+)
+assert is_valid is True, (
     f"is_valid should be True for 'my_variable_name', got {is_valid}"
+)
 
 # Additional test: a string with invalid chars
 s2 = "my-variable!"
 is_valid2 = s2.replace("_", "").isalnum()
-assert is_valid2 is False, \
+assert is_valid2 is False, (
     f"'my-variable!' should not be valid (contains '-' and '!'), got {is_valid2}"
+)
 
 print("All tests passed.")

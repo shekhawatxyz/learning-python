@@ -6,7 +6,7 @@
 
 csv_line = "Alice,30,Engineer"
 # Your code here:
-fields = ...
+fields = csv_line.split(",")
 
 
 # Stub 2
@@ -16,22 +16,23 @@ fields = ...
 
 data = "one::two::three"
 # Your code here:
-converted = ...
+converted = "--".join(data.split("::"))
 
 
 # --- Tests ---
 # Do not modify below this line.
 
-assert fields == ['Alice', '30', 'Engineer'], \
+assert fields == ["Alice", "30", "Engineer"], (
     f"fields should be ['Alice', '30', 'Engineer'], got {fields!r}"
-assert isinstance(fields, list), \
-    f"fields should be a list, got {type(fields).__name__}"
-assert len(fields) == 3, \
-    f"fields should have 3 elements, got {len(fields)}"
+)
+assert isinstance(fields, list), f"fields should be a list, got {type(fields).__name__}"
+assert len(fields) == 3, f"fields should have 3 elements, got {len(fields)}"
 
-assert converted == "one--two--three", \
+assert converted == "one--two--three", (
     f"converted should be 'one--two--three', got {converted!r}"
-assert isinstance(converted, str), \
+)
+assert isinstance(converted, str), (
     f"converted should be a str, got {type(converted).__name__}"
+)
 
 print("All tests passed.")

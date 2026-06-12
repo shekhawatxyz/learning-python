@@ -5,7 +5,7 @@ S = "  Hello, World!  "
 print(S.strip().lower().replace(",", "").replace("!", "").split())
 
 # Your answer:
-
+# ["hello","world"]
 
 # --- Snippet 2 ---
 # More chaining patterns
@@ -16,3 +16,6 @@ print("-".join(S.lower().split()))
 print(S.replace(" ", "_").lower())
 
 # Your answer:
+# ["python","is","great"]
+# python-is-great
+# python_is_great
