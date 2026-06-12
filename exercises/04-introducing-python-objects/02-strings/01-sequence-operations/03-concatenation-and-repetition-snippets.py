@@ -8,7 +8,9 @@ print(a * 3)
 print((a + "! ") * 2)
 
 # Your answer:
-
+# Hello World
+# HelloHelloHello
+# Hello! Hello!
 
 # --- Snippet 2 ---
 # Concatenation with indexing
@@ -20,3 +22,6 @@ print("-" * 20)
 print(result[0] + result[-1])
 
 # Your answer:
+# python
+# --------------------
+# pn

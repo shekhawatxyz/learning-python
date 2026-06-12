@@ -9,6 +9,11 @@ print(S[-2])
 print(len(S))
 
 # Your answer:
+# P
+# n
+# n
+# o
+# 5
 
 
 # --- Snippet 2 ---
@@ -20,3 +25,6 @@ print(S[-len(S)])
 print(S[0] == S[-len(S)])
 
 # Your answer:
+# f
+# a
+# True

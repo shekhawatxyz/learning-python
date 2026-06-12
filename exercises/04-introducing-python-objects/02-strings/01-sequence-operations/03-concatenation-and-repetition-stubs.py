@@ -7,7 +7,9 @@
 
 name = "Alice"
 # Your code here:
-greeting = ...
+base = f"Hello, {name}! "
+base = base * 3
+greeting = base.rstrip()
 
 
 # Stub 2
@@ -19,16 +21,16 @@ greeting = ...
 
 word = "abcd"
 # Your code here:
-pattern = ...
+pattern = word[0] + " - " + word[-1] + " - " + word[::-1]
 
 
 # --- Tests ---
 # Do not modify below this line.
 
-assert greeting == "Hello, Alice! Hello, Alice! Hello, Alice!", \
+assert greeting == "Hello, Alice! Hello, Alice! Hello, Alice!", (
     f"greeting should be 'Hello, Alice! Hello, Alice! Hello, Alice!', got {greeting!r}"
+)
 
-assert pattern == "a - d - dcba", \
-    f"pattern should be 'a - d - dcba', got {pattern!r}"
+assert pattern == "a - d - dcba", f"pattern should be 'a - d - dcba', got {pattern!r}"
 
 print("All tests passed.")

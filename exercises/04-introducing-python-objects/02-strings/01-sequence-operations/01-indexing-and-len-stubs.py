@@ -5,8 +5,8 @@
 
 word = "elephant"
 # Your code here:
-first = ...
-last = ...
+first = word[0]
+last = word[-1]
 
 
 # Stub 2
@@ -15,27 +15,26 @@ last = ...
 
 text = "racecar"
 # Your code here:
-same_ends = ...
+same_ends = text[0] == text[-1]
 
 
 # --- Tests ---
 # Do not modify below this line.
 
-assert first == "e", \
-    f"first should be 'e' for word='elephant', got {first!r}"
-assert last == "t", \
-    f"last should be 't' for word='elephant', got {last!r}"
+assert first == "e", f"first should be 'e' for word='elephant', got {first!r}"
+assert last == "t", f"last should be 't' for word='elephant', got {last!r}"
 
-assert isinstance(same_ends, bool), \
+assert isinstance(same_ends, bool), (
     f"same_ends should be a bool, got {type(same_ends).__name__}"
-assert same_ends is True, \
+)
+assert same_ends is True, (
     f"same_ends should be True for 'racecar' (both 'r'), got {same_ends}"
+)
 
 # Edge case: verify the approach works generally
 word = "a"
 first = word[0]
 last = word[-1]
-assert first == last == "a", \
-    "Indexing should work for single-character strings too"
+assert first == last == "a", "Indexing should work for single-character strings too"
 
 print("All tests passed.")

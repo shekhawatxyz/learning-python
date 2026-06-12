@@ -4,7 +4,7 @@
 
 s = "Hello, World!"
 # Your code here:
-extracted = ...
+extracted = s[7:-1]
 
 
 # Stub 2
@@ -13,22 +13,22 @@ extracted = ...
 
 s = "stressed"
 # Your code here:
-reversed_s = ...
+reversed_s = s[::-1]
 
 
 # --- Tests ---
 # Do not modify below this line.
 
-assert extracted == "World", \
-    f"extracted should be 'World', got {extracted!r}"
+assert extracted == "World", f"extracted should be 'World', got {extracted!r}"
 
-assert reversed_s == "desserts", \
-    f"reversed_s should be 'desserts', got {reversed_s!r}"
+assert reversed_s == "desserts", f"reversed_s should be 'desserts', got {reversed_s!r}"
 
 # Verify slicing was used (result is a string, not a list)
-assert isinstance(extracted, str), \
+assert isinstance(extracted, str), (
     f"extracted should be a str, got {type(extracted).__name__}"
-assert isinstance(reversed_s, str), \
+)
+assert isinstance(reversed_s, str), (
     f"reversed_s should be a str, got {type(reversed_s).__name__}"
+)
 
 print("All tests passed.")
