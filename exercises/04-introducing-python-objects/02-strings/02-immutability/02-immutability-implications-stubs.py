@@ -9,7 +9,10 @@
 
 s = "banana"
 # Your code here:
-result = ...
+chars = []
+for ch in s:
+    chars.append("o" if ch == "a" else ch)
+result = "".join(chars)
 
 
 # Stub 2
@@ -22,24 +25,28 @@ result = ...
 
 s = "Hello, World!"
 # Your code here:
-letters_only = ...
-
+chars = []
+for ch in s:
+    if ch.isalpha():
+        chars.append(ch)
+letters_only = "".join(chars)
 
 # --- Tests ---
 # Do not modify below this line.
 
-assert result == "bonono", \
-    f"result should be 'bonono', got {result!r}"
-assert isinstance(result, str), \
-    f"result should be a str, got {type(result).__name__}"
+assert result == "bonono", f"result should be 'bonono', got {result!r}"
+assert isinstance(result, str), f"result should be a str, got {type(result).__name__}"
 
-assert letters_only == "HelloWorld", \
+assert letters_only == "HelloWorld", (
     f"letters_only should be 'HelloWorld', got {letters_only!r}"
-assert isinstance(letters_only, str), \
+)
+assert isinstance(letters_only, str), (
     f"letters_only should be a str, got {type(letters_only).__name__}"
+)
 
 # Verify original strings weren't changed (immutability)
-assert s == "Hello, World!", \
+assert s == "Hello, World!", (
     f"Original string s should still be 'Hello, World!', got {s!r}"
+)
 
 print("All tests passed.")

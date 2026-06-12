@@ -8,7 +8,8 @@ print(a)
 print(b)
 
 # Your answer:
-
+# HELLO
+# hello
 
 # --- Snippet 2 ---
 # Mutable (list) vs. immutable (string) behavior
@@ -26,3 +27,7 @@ print(str_a)
 print(str_b)
 
 # Your answer:
+# [99,2,3]
+# [99,2,3]
+# xyz
+# abc

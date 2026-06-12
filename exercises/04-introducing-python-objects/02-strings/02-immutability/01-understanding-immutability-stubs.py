@@ -7,7 +7,7 @@
 
 s = "Hello"
 # Your code here:
-modified = ...
+modified = s[0] + "a" + s[2:]
 
 
 # Stub 2
@@ -18,21 +18,18 @@ modified = ...
 
 s = "abcdef"
 # Your code here:
-inserted = ...
+inserted = s[:3] + "XY" + s[3:]
 
 
 # --- Tests ---
 # Do not modify below this line.
 
-assert modified == "Hallo", \
-    f"modified should be 'Hallo', got {modified!r}"
+assert modified == "Hallo", f"modified should be 'Hallo', got {modified!r}"
 
-assert inserted == "abcXYdef", \
-    f"inserted should be 'abcXYdef', got {inserted!r}"
+assert inserted == "abcXYdef", f"inserted should be 'abcXYdef', got {inserted!r}"
 
 # Verify the originals weren't somehow changed (they can't be, but
 # this reinforces the concept)
-assert "Hello"[1] == "e", \
-    "String literals are immutable; 'Hello' hasn't changed"
+assert "Hello"[1] == "e", "String literals are immutable; 'Hello' hasn't changed"
 
 print("All tests passed.")

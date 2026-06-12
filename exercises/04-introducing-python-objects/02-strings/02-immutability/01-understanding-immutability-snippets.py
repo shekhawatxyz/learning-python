@@ -11,7 +11,9 @@ print(original)
 print(new)
 
 # Your answer:
-
+# Hallo
+# Hello
+# HELLO
 
 # --- Snippet 2 ---
 # Rebinding vs. mutating
@@ -24,3 +26,6 @@ S = S[:1] + "l" + S[2:]
 print(S)
 
 # Your answer:
+# spam
+# spam eggs
+# slam eggs
