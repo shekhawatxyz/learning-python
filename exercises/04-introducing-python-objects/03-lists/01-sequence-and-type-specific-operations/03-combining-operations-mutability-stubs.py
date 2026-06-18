@@ -13,7 +13,11 @@
 data = [3, 5, 3, 1, 5, 2, 1]
 
 # Your code here:
-
+unique_sorted = []
+for c in data:
+    if c not in unique_sorted:
+        unique_sorted.append(c)
+unique_sorted.sort()
 
 # --- Stub 2 ---
 # Given `a` and `b`, merge them into a single sorted list.
@@ -27,7 +31,8 @@ a = [1, 3, 5]
 b = [2, 4, 6]
 
 # Your code here:
-
+# merged = a + b
+merged = sorted(a + b)
 
 # --- Tests ---
 

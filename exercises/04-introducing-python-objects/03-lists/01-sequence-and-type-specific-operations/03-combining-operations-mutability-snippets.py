@@ -18,7 +18,10 @@ print(L)
 print(M)
 
 # Your answer:
-
+# 1,2,3,4
+# 1,2,3,4
+# 1,2,3,4
+# 1,2,3
 # --- Snippet 2 ---
 # Explores: sorted() (returns new list) vs. .sort() (mutates in place)
 
@@ -30,3 +33,6 @@ original.sort()
 print(original)
 
 # Your answer:
+# 3,1,2
+# 1,2,3
+# 1,2,3

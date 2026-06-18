@@ -8,7 +8,8 @@
 # After this, `nums` should be the sorted list without that largest element.
 
 nums = [5, 3, 8, 1, 9, 2]
-
+nums.sort()
+largest = nums.pop()
 # Your code here (use list methods):
 
 
@@ -21,7 +22,8 @@ nums = [5, 3, 8, 1, 9, 2]
 L = [1, 3, 5, 7]
 
 # Your code here (use list methods):
-
+L.append(4)
+L.sort()
 
 # --- Tests ---
 

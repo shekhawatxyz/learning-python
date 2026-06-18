@@ -12,6 +12,11 @@ print(L[::-1])
 print(len(L))
 
 # Your answer:
+# 1
+# 5
+# 2,3
+# 5,4,3,2,1
+# 5
 
 # --- Snippet 2 ---
 # Explores: slicing variants, negative-index slicing, concatenation, repetition
@@ -23,3 +28,7 @@ print(L + [1, 2])
 print(L * 2)
 
 # Your answer:
+# ["a","b"]
+# ["c","d"]
+# ['a','b','c','d',1,2]
+# ["a","b","c","d","a","b","c","d"]

@@ -8,8 +8,8 @@
 
 items = [10, 20, 30, 40, 50]
 
-second = ...       # replace ... with your code
-last_two = ...     # replace ... with your code
+second = items[1]  # replace ... with your code
+last_two = items[-2:]  # replace ... with your code
 
 # --- Stub 2 ---
 # Given `L`, create a new list that is L repeated 3 times,
@@ -18,8 +18,8 @@ last_two = ...     # replace ... with your code
 
 L = [1, 2, 3]
 
-repeated = ...     # replace ... with your code
-rep_len = ...      # replace ... with your code
+repeated = L * 3  # replace ... with your code
+rep_len = len(repeated)  # replace ... with your code
 
 # --- Tests ---
 
@@ -43,8 +43,7 @@ assert repeated == [1, 2, 3, 1, 2, 3, 1, 2, 3], (
     f"Use the * operator to repeat a list."
 )
 assert rep_len == 9, (
-    f"Expected rep_len to be 9, got {rep_len!r}. "
-    f"Use len() on the repeated list."
+    f"Expected rep_len to be 9, got {rep_len!r}. Use len() on the repeated list."
 )
 assert L == [1, 2, 3], (
     f"Expected L to still be [1, 2, 3], got {L!r}. "
