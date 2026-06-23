@@ -13,7 +13,11 @@ print("name" in d)
 print("email" in d)
 
 # Your answer:
-
+# Alice
+# 30
+# 3
+# True
+# False
 
 # --- Snippet 2 ---
 # Creating a dict from empty, adding keys, and overwriting an existing key
@@ -28,3 +32,6 @@ print(d["x"])
 print(len(d))
 
 # Your answer:
+# {"x":99,"y":20}
+# 99
+# 2

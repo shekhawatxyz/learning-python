@@ -10,9 +10,9 @@ keys = ["a", "b", "c"]
 values = [1, 2, 3]
 
 # Write your code here:
-result = None
-
-
+result = {}
+for i in range(len(keys)):
+    result[keys[i]] = values[i]
 # --- Stub 2 ---
 # Given a string `text`, create a dict where each unique character maps to
 # the number of times it appears in the string. Use a loop.
@@ -21,27 +21,31 @@ result = None
 text = "hello"
 
 # Write your code here:
-char_counts = None
-
+char_counts = {}
+for t in text:
+    char_counts[t] = char_counts.get(t, 0) + 1
 
 # --- Tests ---
 
 # Tests for Stub 1
-assert isinstance(result, dict), \
+assert isinstance(result, dict), (
     f"Expected result to be a dict, got {type(result).__name__}"
-assert result == {"a": 1, "b": 2, "c": 3}, \
+)
+assert result == {"a": 1, "b": 2, "c": 3}, (
     f"Expected {{'a': 1, 'b': 2, 'c': 3}}, got {result}"
-assert len(result) == 3, \
-    f"Expected 3 key-value pairs, got {len(result)}"
+)
+assert len(result) == 3, f"Expected 3 key-value pairs, got {len(result)}"
 
 # Tests for Stub 2
-assert isinstance(char_counts, dict), \
+assert isinstance(char_counts, dict), (
     f"Expected char_counts to be a dict, got {type(char_counts).__name__}"
-assert char_counts == {"h": 1, "e": 1, "l": 2, "o": 1}, \
+)
+assert char_counts == {"h": 1, "e": 1, "l": 2, "o": 1}, (
     f"Expected {{'h': 1, 'e': 1, 'l': 2, 'o': 1}}, got {char_counts}"
-assert char_counts["l"] == 2, \
+)
+assert char_counts["l"] == 2, (
     f"Expected 'l' to have count 2, got {char_counts.get('l', 'key missing')}"
-assert len(char_counts) == 4, \
-    f"Expected 4 unique characters, got {len(char_counts)}"
+)
+assert len(char_counts) == 4, f"Expected 4 unique characters, got {len(char_counts)}"
 
 print("All tests passed!")
