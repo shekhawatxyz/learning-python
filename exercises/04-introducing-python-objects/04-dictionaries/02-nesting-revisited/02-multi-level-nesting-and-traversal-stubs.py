@@ -7,15 +7,13 @@
 #   2. Change the "debug" value to True (in place on the existing dict).
 
 config = {
-    "server": {
-        "host": "localhost",
-        "ports": {"http": 80, "https": 443}
-    },
-    "debug": False
+    "server": {"host": "localhost", "ports": {"http": 80, "https": 443}},
+    "debug": False,
 }
 
 # Write your code here:
-https_port = None
+https_port = config["server"]["ports"]["https"]
+config["debug"] = True
 
 
 # --- Stub 2 ---
@@ -28,34 +26,38 @@ https_port = None
 students = [
     {"name": "Alice", "scores": [90, 85, 88]},
     {"name": "Bob", "scores": [72, 91, 84]},
-    {"name": "Charlie", "scores": [95, 88, 92]}
+    {"name": "Charlie", "scores": [95, 88, 92]},
 ]
 
 # Write your code here:
-averages = None
+averages = {s["name"]: sum(s["scores"]) / len(s["scores"]) for s in students}
 
 
 # --- Tests ---
 
 # Tests for Stub 1
-assert https_port == 443, \
-    f"Expected https_port to be 443, got {https_port}"
-assert config["debug"] is True, \
+assert https_port == 443, f"Expected https_port to be 443, got {https_port}"
+assert config["debug"] is True, (
     f"Expected config['debug'] to be True after modification, got {config['debug']}"
-assert config["server"]["host"] == "localhost", \
+)
+assert config["server"]["host"] == "localhost", (
     f"Expected server host to remain 'localhost', got {config['server']['host']}"
+)
 
 # Tests for Stub 2
-assert isinstance(averages, dict), \
+assert isinstance(averages, dict), (
     f"Expected averages to be a dict, got {type(averages).__name__}"
-assert len(averages) == 3, \
-    f"Expected 3 entries in averages, got {len(averages)}"
+)
+assert len(averages) == 3, f"Expected 3 entries in averages, got {len(averages)}"
 
-assert abs(averages["Alice"] - 87.6667) < 0.01, \
+assert abs(averages["Alice"] - 87.6667) < 0.01, (
     f"Expected Alice's average to be ~87.67, got {averages.get('Alice', 'key missing')}"
-assert abs(averages["Bob"] - 82.3333) < 0.01, \
+)
+assert abs(averages["Bob"] - 82.3333) < 0.01, (
     f"Expected Bob's average to be ~82.33, got {averages.get('Bob', 'key missing')}"
-assert abs(averages["Charlie"] - 91.6667) < 0.01, \
+)
+assert abs(averages["Charlie"] - 91.6667) < 0.01, (
     f"Expected Charlie's average to be ~91.67, got {averages.get('Charlie', 'key missing')}"
+)
 
 print("All tests passed!")

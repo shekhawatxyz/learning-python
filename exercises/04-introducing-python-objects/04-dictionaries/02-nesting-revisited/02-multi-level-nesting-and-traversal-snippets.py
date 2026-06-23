@@ -6,7 +6,7 @@
 
 config = {
     "db": {"host": "localhost", "ports": [5432, 5433]},
-    "app": {"debug": True, "name": "myapp"}
+    "app": {"debug": True, "name": "myapp"},
 }
 
 print(config["db"]["ports"][0])
@@ -15,7 +15,10 @@ print(config["app"]["debug"])
 print(len(config))
 
 # Your answer:
-
+# 5432
+# 5433
+# True
+# 2
 
 # --- Snippet 2 ---
 # A list of dicts: indexing, field access, and comprehensions over records
@@ -23,7 +26,7 @@ print(len(config))
 records = [
     {"name": "Alice", "score": 90},
     {"name": "Bob", "score": 85},
-    {"name": "Charlie", "score": 92}
+    {"name": "Charlie", "score": 92},
 ]
 
 print(records[0]["name"])
@@ -32,3 +35,7 @@ print([r["name"] for r in records])
 print([r["score"] for r in records if r["score"] > 88])
 
 # Your answer:
+# Alice
+# 92
+# ["Alice","Bob","Charlie"]
+# [90,92]
