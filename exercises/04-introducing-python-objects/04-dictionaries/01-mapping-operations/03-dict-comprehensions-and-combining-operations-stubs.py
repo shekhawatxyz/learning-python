@@ -8,7 +8,7 @@
 words = ["apple", "banana", "cherry", "avocado", "blueberry"]
 
 # Write your code here:
-word_lengths = None
+word_lengths = {w: len(w) for w in words}
 
 
 # --- Stub 2 ---
@@ -20,38 +20,48 @@ word_lengths = None
 words = ["the", "cat", "sat", "on", "the", "mat", "the", "cat"]
 
 # Write your code here:
-freq = None
-common = None
-
+freq = {}
+for w in words:
+    freq[w] = freq.get(w, 0) + 1
+common = {k: v for k, v in freq.items() if v > 1}
 
 # --- Tests ---
 
 # Tests for Stub 1
-assert isinstance(word_lengths, dict), \
+assert isinstance(word_lengths, dict), (
     f"Expected word_lengths to be a dict, got {type(word_lengths).__name__}"
-assert word_lengths == {"apple": 5, "banana": 6, "cherry": 6, "avocado": 7, "blueberry": 9}, \
+)
+assert word_lengths == {
+    "apple": 5,
+    "banana": 6,
+    "cherry": 6,
+    "avocado": 7,
+    "blueberry": 9,
+}, (
     f"Expected {{'apple': 5, 'banana': 6, 'cherry': 6, 'avocado': 7, 'blueberry': 9}}, got {word_lengths}"
-assert word_lengths["blueberry"] == 9, \
+)
+assert word_lengths["blueberry"] == 9, (
     f"Expected 'blueberry' to map to 9, got {word_lengths.get('blueberry', 'key missing')}"
-assert len(word_lengths) == 5, \
-    f"Expected 5 entries, got {len(word_lengths)}"
+)
+assert len(word_lengths) == 5, f"Expected 5 entries, got {len(word_lengths)}"
 
 # Tests for Stub 2 — freq
-assert isinstance(freq, dict), \
-    f"Expected freq to be a dict, got {type(freq).__name__}"
-assert freq == {"the": 3, "cat": 2, "sat": 1, "on": 1, "mat": 1}, \
+assert isinstance(freq, dict), f"Expected freq to be a dict, got {type(freq).__name__}"
+assert freq == {"the": 3, "cat": 2, "sat": 1, "on": 1, "mat": 1}, (
     f"Expected {{'the': 3, 'cat': 2, 'sat': 1, 'on': 1, 'mat': 1}}, got {freq}"
-assert freq["the"] == 3, \
+)
+assert freq["the"] == 3, (
     f"Expected 'the' to have frequency 3, got {freq.get('the', 'key missing')}"
+)
 
 # Tests for Stub 2 — common
-assert isinstance(common, dict), \
+assert isinstance(common, dict), (
     f"Expected common to be a dict, got {type(common).__name__}"
-assert common == {"the": 3, "cat": 2}, \
-    f"Expected {{'the': 3, 'cat': 2}}, got {common}"
-assert "sat" not in common, \
+)
+assert common == {"the": 3, "cat": 2}, f"Expected {{'the': 3, 'cat': 2}}, got {common}"
+assert "sat" not in common, (
     f"Expected 'sat' (frequency 1) to be excluded from common, but it was present"
-assert len(common) == 2, \
-    f"Expected 2 entries in common, got {len(common)}"
+)
+assert len(common) == 2, f"Expected 2 entries in common, got {len(common)}"
 
 print("All tests passed!")

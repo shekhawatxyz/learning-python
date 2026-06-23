@@ -12,8 +12,10 @@ print(list(d.items()))
 print(sorted(d.keys()))
 
 # Your answer:
-
-
+# ["a", "b", "c"]
+# [1, 2, 3]
+# [("a", 1), ("b", 2), ("c", 3)]
+# ["a", "b", "c"]
 # --- Snippet 2 ---
 # Two styles of iterating over a dict
 
@@ -26,3 +28,9 @@ for k, v in d.items():
     print(f"{k} = {v}")
 
 # Your answer:
+# x 10
+# y 20
+# z 30
+# x = 10
+# y = 20
+# z = 30
