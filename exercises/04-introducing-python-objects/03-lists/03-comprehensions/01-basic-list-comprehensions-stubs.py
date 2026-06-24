@@ -8,7 +8,7 @@
 
 nums = [1, 2, 3, 4, 5]
 
-cubes = ...  # replace ... with a list comprehension
+cubes = [n**3 for n in nums]  # replace ... with a list comprehension
 
 # --- Stub 2 ---
 # Given `words`, use a list comprehension to create a list of their lengths.
@@ -17,7 +17,7 @@ cubes = ...  # replace ... with a list comprehension
 
 words = ["hello", "world", "python"]
 
-lengths = ...  # replace ... with a list comprehension
+lengths = [len(w) for w in words]  # replace ... with a list comprehension
 
 # --- Tests ---
 

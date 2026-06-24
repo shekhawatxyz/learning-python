@@ -5,11 +5,12 @@
 # Explores: basic list comprehension syntax, range(), and applying
 # an expression to each element; comprehension over a string.
 
-print([x ** 2 for x in range(6)])
+print([x**2 for x in range(6)])
 print([c.upper() for c in "hello"])
 
 # Your answer:
-
+# [1,4,9,25,36]
+# ['H','E','L','L','O']
 # --- Snippet 2 ---
 # Explores: comprehension as transformation of an existing list,
 # identity comprehension (copying), and using sum() with a comprehension.
@@ -20,3 +21,6 @@ print([x for x in nums])
 print(sum([x for x in nums]))
 
 # Your answer:
+# [10,20,30,40,50]
+# [1,2,3,4,5]
+# 15
