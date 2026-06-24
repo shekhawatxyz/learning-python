@@ -10,7 +10,7 @@
 matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
 
 # Your code here:
-
+flat = [c for r in matrix for c in r]
 
 # --- Stub 2 ---
 # Given `matrix`, compute the sum of each row and store the sums as a list.
@@ -22,7 +22,7 @@ matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
 matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
 
 # Your code here:
-
+row_sums = [sum(m) for m in matrix]
 
 # --- Tests ---
 
@@ -31,9 +31,7 @@ assert flat == [1, 2, 3, 4, 5, 6, 7, 8, 9], (
     f"Expected flat to be [1, 2, 3, 4, 5, 6, 7, 8, 9], got {flat!r}. "
     f"Iterate over each row, then over each element in that row, appending to flat."
 )
-assert isinstance(flat, list), (
-    f"Expected flat to be a list, got {type(flat).__name__}."
-)
+assert isinstance(flat, list), f"Expected flat to be a list, got {type(flat).__name__}."
 assert len(flat) == 9, (
     f"Expected flat to have 9 elements, got {len(flat)}. "
     f"A 3x3 matrix should flatten to 9 elements."

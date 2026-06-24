@@ -12,7 +12,10 @@ print(M[2][-1])
 print(M[0][0] + M[2][2])
 
 # Your answer:
-
+# [1,2,3]
+# 6
+# 9
+# 10
 # --- Snippet 2 ---
 # Explores: nested lists as records/rows, accessing components of records
 
@@ -23,3 +26,7 @@ print(data[2][1])
 print(data[0][1] + data[1][1])
 
 # Your answer:
+# ['Bob',85]
+# Bob
+# 92
+# 175

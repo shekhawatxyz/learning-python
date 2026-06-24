@@ -11,7 +11,13 @@
 # You can build the matrix manually or with loops — your choice.
 
 # Your code here:
-
+matrix = []
+for i in range(3):
+    temp_matrix = []
+    for j in range(3):
+        temp_matrix.append(i * 3 + j + 1)
+    matrix.append(temp_matrix)
+middle_row = matrix[1]
 
 # --- Stub 2 ---
 # Given `matrix`, extract the second column (index 1) as a list: [2, 5, 8].
@@ -21,6 +27,7 @@
 matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
 
 # Your code here:
+column = [row[1] for row in matrix]
 
 
 # --- Tests ---

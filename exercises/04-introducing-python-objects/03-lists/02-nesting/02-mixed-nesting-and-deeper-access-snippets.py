@@ -13,7 +13,10 @@ print(record[1][-1])
 print(record[2]["grade"])
 
 # Your answer:
-
+# Alice
+# 95
+# 91
+# A
 # --- Snippet 2 ---
 # Explores: 3D nesting (list of lists of lists), triple indexing,
 # and len() at different nesting levels.
@@ -26,3 +29,8 @@ print(len(grid[0]))
 print(len(grid[0][0]))
 
 # Your answer:
+# 3
+# 6
+# 2
+# 2
+# 2
